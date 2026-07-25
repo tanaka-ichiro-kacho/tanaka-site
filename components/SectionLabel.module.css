@@ -1,0 +1,16 @@
+.label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 48px 0 20px;
+  font-family: var(--font-shippori-mincho-b1), serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}

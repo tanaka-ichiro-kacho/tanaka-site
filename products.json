@@ -1,0 +1,32 @@
+{
+  "_readme": "PA-API/Creators APIは直近30日で10件の売上実績がないと使えないため、フェーズ1ではこのファイルを手動メンテナンスする。SiteStripe(Amazonアソシエイト管理画面のリンク発行機能)で1商品ずつ取得したURLをここに登録する。1商品につき2〜3行で十分、価格や在庫はここでは持たない(記事内では価格を書かない=更新負けを防ぐ)。",
+  "categories": {
+    "体のあるある": [
+      {
+        "id": "glasses-01",
+        "name": "老眼鏡(既製品・携帯ケース付き)",
+        "affiliate_url": "【SiteStripeで取得したURLをここに貼る】",
+        "context_hint": "会議・資料の文字が見えづらい、忘れて困った、というエピソードと相性が良い",
+        "used_in_articles": ["第13号"]
+      }
+    ],
+    "道具のあるある": [
+      {
+        "id": "fan-retro-01",
+        "name": "レトロデザインの扇風機",
+        "affiliate_url": "【SiteStripeで取得したURLをここに貼る】",
+        "context_hint": "実家の家電との比較、スイッチの硬さ・軽さの違いなどの語りと相性が良い",
+        "used_in_articles": []
+      }
+    ],
+    "晩酌のあるある": [
+      {
+        "id": "icepick-01",
+        "name": "製氷皿・アイスピックセット",
+        "affiliate_url": "【SiteStripeで取得したURLをここに貼る】",
+        "context_hint": "家庭内の役割分担ネタ、晩酌の儀式感と相性が良い",
+        "used_in_articles": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>月刊・田中課長 | 今日も、昭和の視点で回覧します。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #EDE8DB;
+    --paper-card: #F8F5EC;
+    --ink: #232F3B;
+    --ink-soft: #4B5563;
+    --stamp-red: #AE3B2E;
+    --folder-mustard: #BD8A2E;
+    --rule: #B4AA92;
+    --rule-soft: #DAD3C0;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:
+      repeating-linear-gradient(0deg, rgba(180,170,146,0.06) 0px, rgba(180,170,146,0.06) 1px, transparent 1px, transparent 34px),
+      var(--paper);
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+
+  /* ===== Masthead: 社内報の表紙風 ===== */
+  .masthead{
+    border-bottom:3px double var(--ink);
+    padding:28px 0 18px;
+  }
+  .masthead-top{
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-size:12px; letter-spacing:0.12em; color:var(--ink-soft);
+    font-family:'Zen Kaku Gothic New', sans-serif; font-weight:500;
+    margin-bottom:14px;
+  }
+  .masthead-top .issue{ font-weight:700; color:var(--stamp-red); }
+  .masthead-title{
+    font-family:'Shippori Mincho B1', serif;
+    font-weight:800;
+    font-size:clamp(38px, 7vw, 64px);
+    letter-spacing:0.06em;
+    display:flex;
+    align-items:flex-end;
+    gap:18px;
+  }
+  .masthead-title .stamp-mini{
+    flex-shrink:0;
+    width:52px; height:52px;
+    border:3px solid var(--stamp-red);
+    border-radius:50%;
+    color:var(--stamp-red);
+    font-family:'Zen Old Mincho', serif;
+    font-weight:600;
+    font-size:15px;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    transform:rotate(-8deg);
+    opacity:0.9;
+  }
+  .masthead-sub{
+    margin-top:10px;
+    font-size:15px;
+    color:var(--ink-soft);
+    letter-spacing:0.04em;
+  }
+
+  /* ===== Hero: 課長からの一言 ===== */
+  .hero{
+    padding:44px 0 40px;
+    border-bottom:1px solid var(--rule-soft);
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:32px;
+    align-items:start;
+  }
+  .hero p{
+    font-size:16px;
+    color:var(--ink);
+    max-width:56ch;
+  }
+  .hero .lead{
+    font-family:'Shippori Mincho B1', serif;
+    font-weight:700;
+    font-size:22px;
+    margin-bottom:14px;
+  }
+  .hero-stamp-badge{
+    border:2px solid var(--ink);
+    padding:14px 18px;
+    font-size:12px;
+    text-align:center;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .hero-stamp-badge strong{
+    display:block;
+    font-family:'Shippori Mincho B1', serif;
+    font-size:15px;
+    color:var(--ink);
+    margin-bottom:4px;
+  }
+
+  /* ===== 回覧セクション見出し ===== */
+  .section-label{
+    display:flex; align-items:center; gap:12px;
+    margin:48px 0 20px;
+    font-family:'Shippori Mincho B1', serif;
+    font-size:22px;
+    font-weight:700;
+  }
+  .section-label::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background:var(--rule);
+  }
+
+  /* ===== 記事カード(回覧文書風) ===== */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+    margin-bottom:20px;
+  }
+  .card{
+    background:var(--paper-card);
+    border:1px solid var(--rule-soft);
+    padding:22px 20px 24px;
+    position:relative;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(35,47,59,0.10);
+  }
+  .card .cat{
+    display:inline-block;
+    font-size:11px;
+    letter-spacing:0.08em;
+    color:var(--folder-mustard);
+    border:1px solid var(--folder-mustard);
+    padding:3px 8px;
+    margin-bottom:14px;
+    font-weight:700;
+  }
+  .card h3{
+    font-family:'Shippori Mincho B1', serif;
+    font-size:19px;
+    line-height:1.5;
+    margin-bottom:10px;
+  }
+  .card p{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin-bottom:14px;
+  }
+  .card .meta{
+    font-size:11px;
+    color:var(--ink-soft);
+    display:flex; justify-content:space-between;
+    border-top:1px dashed var(--rule);
+    padding-top:10px;
+  }
+  .stamp-corner{
+    position:absolute; top:-10px; right:14px;
+    width:44px; height:44px;
+    border:2.5px solid var(--stamp-red);
+    border-radius:50%;
+    color:var(--stamp-red);
+    background:var(--paper-card);
+    font-family:'Zen Old Mincho', serif;
+    font-size:12px; font-weight:600;
+    display:flex; align-items:center; justify-content:center;
+    transform:rotate(9deg);
+    opacity:0;
+    transition:opacity .18s ease, transform .18s ease;
+  }
+  .card:hover .stamp-corner{ opacity:0.95; transform:rotate(3deg); }
+
+  /* ===== 記事詳細(#PR記事の実例) ===== */
+  .article{
+    margin-top:56px;
+    padding-top:40px;
+    border-top:3px double var(--ink);
+  }
+  .pr-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--stamp-red);
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.06em;
+    padding:6px 14px;
+    margin-bottom:18px;
+  }
+  .article h2{
+    font-family:'Shippori Mincho B1', serif;
+    font-size:clamp(24px, 4vw, 32px);
+    line-height:1.5;
+    margin-bottom:14px;
+  }
+  .article .byline{
+    font-size:12px; color:var(--ink-soft);
+    margin-bottom:28px;
+    border-bottom:1px solid var(--rule-soft);
+    padding-bottom:20px;
+  }
+  .article .body-text p{ margin-bottom:20px; font-size:15.5px; }
+  .article .body-text .quote-line{
+    font-family:'Shippori Mincho B1', serif;
+    font-size:19px;
+    border-left:3px solid var(--stamp-red);
+    padding:4px 0 4px 18px;
+    margin:28px 0;
+    color:var(--ink);
+  }
+
+  .product-box{
+    background:var(--paper-card);
+    border:1px solid var(--ink);
+    padding:24px 22px;
+    margin:32px 0;
+  }
+  .product-box .tag{
+    font-size:11px; color:var(--folder-mustard); font-weight:700; letter-spacing:0.06em;
+    margin-bottom:8px; display:block;
+  }
+  .product-box h4{
+    font-family:'Shippori Mincho B1', serif;
+    font-size:18px; margin-bottom:10px;
+  }
+  .product-box p{ font-size:13.5px; color:var(--ink-soft); margin-bottom:16px; }
+  .approve-btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--ink); color:var(--paper);
+    font-size:13px; font-weight:700; letter-spacing:0.04em;
+    padding:12px 20px;
+    border:1px solid var(--ink);
+  }
+  .approve-btn::before{
+    content:'印';
+    font-family:'Zen Old Mincho', serif;
+    border:1.5px solid var(--paper);
+    border-radius:50%;
+    width:20px; height:20px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px;
+  }
+
+  footer{
+    margin-top:64px;
+    padding:32px 0 48px;
+    border-top:1px solid var(--rule-soft);
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  footer .disclosure{
+    background:var(--paper-card);
+    border-left:3px solid var(--folder-mustard);
+    padding:14px 18px;
+    margin-bottom:18px;
+    font-size:12.5px;
+  }
+
+  @media (max-width:760px){
+    .grid{grid-template-columns:1fr;}
+    .hero{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <span>社内報 兼 生活便り</span>
+      <span class="issue">第14号 / 発行:田中一郎</span>
+    </div>
+    <div class="masthead-title">
+      <span>月刊・田中課長</span>
+      <span class="stamp-mini">回覧<br>済</span>
+    </div>
+    <div class="masthead-sub">今日も、昭和の視点で回覧します。― 52歳・課長・田中一郎の生活便り</div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="lead">「便利になったのはいいが、納得はしとらん。」</p>
+      <p>時代についていくのはやぶさかではない。だが、体と心がついてこないことがある。老眼鏡、腰、晩酌の量。この回覧板は、そういう"課長世代のあるある"を記録し、実際に助けられた道具を淡々と紹介する場所である。</p>
+    </div>
+    <div class="hero-stamp-badge">
+      <strong>回覧規定</strong>
+      広告を含む記事には<br>必ず「PR」印を押す
+    </div>
+  </section>
+
+  <div class="section-label">今週の回覧</div>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="stamp-corner">既読</div>
+      <span class="cat">体のあるある</span>
+      <h3>老眼鏡を忘れて始末書を書いた話</h3>
+      <p>会議資料の文字が滲んで見えた日。若手には言えなかった理由がある。</p>
+      <div class="meta"><span>第13号</span><span>体のあるある・01</span></div>
+    </article>
+
+    <article class="card">
+      <div class="stamp-corner">既読</div>
+      <span class="cat">道具のあるある</span>
+      <h3>扇風機のスイッチ、なぜこんなに硬いのか問題</h3>
+      <p>「強」まで回すのに指が痛い。実家にあったやつはもっと軽かった。</p>
+      <div class="meta"><span>第12号</span><span>道具のあるある・04</span></div>
+    </article>
+
+    <article class="card">
+      <div class="stamp-corner">既読</div>
+      <span class="cat">晩酌のあるある</span>
+      <h3>氷を割る係は、なぜか課長の仕事である</h3>
+      <p>家庭内の序列と、製氷皿の構造には深い関係があると睨んでいる。</p>
+      <div class="meta"><span>第11号</span><span>晩酌のあるある・02</span></div>
+    </article>
+
+  </div>
+
+  <!-- ===== 記事詳細:実際の#PR記事テンプレート ===== -->
+  <div class="article">
+    <span class="pr-badge">PR ― 本記事は広告(Amazonアソシエイト)を含みます</span>
+    <h2>老眼鏡を忘れて始末書を書いた話</h2>
+    <div class="byline">第13号 ／ 体のあるある ／ 発行:田中一郎</div>
+
+    <div class="body-text">
+      <p>先週の火曜、会議資料の数字がどうにも滲んで見えた。若手の前で「これ何桁だ」とは、口が裂けても聞けない。仕方なく、隣の資料をちらちら覗きながら乗り切った。あとで課長席に戻り、こっそり老眼鏡を探したが、家に忘れてきていた。</p>
+      <p class="quote-line">見えないのは老いではない。老眼鏡を忘れたのが悪い。そう自分に言い聞かせている。</p>
+      <p>思えば、若い頃は「老眼鏡なんぞ年寄りの道具だ」と笑っていた口である。だが実際になってみると、あれは老いではなく、単なる"道具の準備不足"だと分かった。財布や社員証と同じ扱いにすべきものだったのだ。</p>
+    </div>
+
+    <div class="product-box">
+      <span class="tag">課長の道具箱</span>
+      <h4>持ち歩き用の老眼鏡を、鞄と机の両方に常備する</h4>
+      <p>会社用・自宅用で分けて置いておけば、「忘れて始末書」は防げる。度数は市販の既製品でまず様子を見るのが賢明。</p>
+      <a class="approve-btn" href="#" rel="sponsored noopener">Amazonで確認する(商品リンクの設置例)</a>
+    </div>
+
+    <div class="body-text">
+      <p>始末書は結局、書かずに済んだ。だが机の引き出しに老眼鏡を1本置いてから、資料の数字で悩むことはなくなった。若手には「老眼鏡を忘れた」とは、まだ言えていない。</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="disclosure">
+      本サイトはAmazonアソシエイト・プログラムの参加者です。記事内の商品紹介リンクを通じてAmazon.co.jpで購入いただくと、当サイトに紹介料が発生する場合があります。広告を含む記事には本ページのように「PR」表記を付与しています。
+    </div>
+    <div>月刊・田中課長 ― 昭和の視点で、令和の生活を回覧する。</div>
+  </footer>
+
+</div>
+
+</body>
+</html>

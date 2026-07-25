@@ -1,0 +1,48 @@
+:root {
+  --paper: #ede8db;
+  --paper-card: #f8f5ec;
+  --ink: #232f3b;
+  --ink-soft: #4b5563;
+  --stamp-red: #ae3b2e;
+  --folder-mustard: #bd8a2e;
+  --rule: #b4aa92;
+  --rule-soft: #dad3c0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(180, 170, 146, 0.06) 0px,
+      rgba(180, 170, 146, 0.06) 1px,
+      transparent 1px,
+      transparent 34px
+    ),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-zen-kaku-gothic-new), sans-serif;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}

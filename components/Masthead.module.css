@@ -1,0 +1,56 @@
+.masthead {
+  border-bottom: 3px double var(--ink);
+  padding: 28px 0 18px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.issue {
+  font-weight: 700;
+  color: var(--stamp-red);
+}
+
+.title {
+  font-family: var(--font-shippori-mincho-b1), serif;
+  font-weight: 800;
+  font-size: clamp(38px, 7vw, 64px);
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.stampMini {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border: 3px solid var(--stamp-red);
+  border-radius: 50%;
+  color: var(--stamp-red);
+  font-family: var(--font-zen-old-mincho), serif;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: pre-line;
+  transform: rotate(-8deg);
+  opacity: 0.9;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+}

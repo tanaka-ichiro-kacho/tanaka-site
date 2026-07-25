@@ -1,0 +1,44 @@
+.hero {
+  padding: 44px 0 40px;
+  border-bottom: 1px solid var(--rule-soft);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: start;
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--ink);
+  max-width: 56ch;
+}
+
+.lead {
+  font-family: var(--font-shippori-mincho-b1), serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.stampBadge {
+  border: 2px solid var(--ink);
+  padding: 14px 18px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--ink-soft);
+  white-space: pre-line;
+}
+
+.stampBadge strong {
+  display: block;
+  font-family: var(--font-shippori-mincho-b1), serif;
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

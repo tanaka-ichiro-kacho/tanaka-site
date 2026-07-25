@@ -1,0 +1,53 @@
+.box {
+  background: var(--paper-card);
+  border: 1px solid var(--ink);
+  padding: 24px 22px;
+  margin: 32px 0;
+}
+
+.tag {
+  font-size: 11px;
+  color: var(--folder-mustard);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.box h4 {
+  font-family: var(--font-shippori-mincho-b1), serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+.approveBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 12px 20px;
+  border: 1px solid var(--ink);
+}
+
+.approveBtn::before {
+  content: "印";
+  font-family: var(--font-zen-old-mincho), serif;
+  border: 1.5px solid var(--paper);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
