@@ -4,7 +4,7 @@ import SectionLabel from "@/components/SectionLabel";
 import ArticleGrid from "@/components/ArticleGrid";
 import ArticleDetail from "@/components/ArticleDetail";
 import SiteFooter from "@/components/SiteFooter";
-import { articleSummaries, featuredArticle } from "@/data/articles";
+import { articleSummaries, articleDetails } from "@/data/articles";
 
 export default function Home() {
   return (
@@ -30,7 +30,9 @@ export default function Home() {
 
       <ArticleGrid articles={articleSummaries} />
 
-      <ArticleDetail article={featuredArticle} />
+      {articleDetails.map((article) => (
+        <ArticleDetail key={article.id} article={article} />
+      ))}
 
       <SiteFooter
         disclosure="本サイトはAmazonアソシエイト・プログラムの参加者です。記事内の商品紹介リンクを通じてAmazon.co.jpで購入いただくと、当サイトに紹介料が発生する場合があります。広告を含む記事には本ページのように「PR」表記を付与しています。"

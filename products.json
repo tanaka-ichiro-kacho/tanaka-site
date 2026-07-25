@@ -5,7 +5,7 @@
       {
         "id": "glasses-01",
         "name": "老眼鏡(既製品・携帯ケース付き)",
-        "affiliate_url": "【SiteStripeで取得したURLをここに貼る】",
+        "affiliate_url": "https://link.amazon/B08n8jDDj",
         "context_hint": "会議・資料の文字が見えづらい、忘れて困った、というエピソードと相性が良い",
         "used_in_articles": ["第13号"]
       }
@@ -14,18 +14,18 @@
       {
         "id": "fan-retro-01",
         "name": "レトロデザインの扇風機",
-        "affiliate_url": "【SiteStripeで取得したURLをここに貼る】",
+        "affiliate_url": "https://link.amazon/B07pkha2X",
         "context_hint": "実家の家電との比較、スイッチの硬さ・軽さの違いなどの語りと相性が良い",
-        "used_in_articles": []
+        "used_in_articles": ["第12号"]
       }
     ],
     "晩酌のあるある": [
       {
         "id": "icepick-01",
         "name": "製氷皿・アイスピックセット",
-        "affiliate_url": "【SiteStripeで取得したURLをここに貼る】",
+        "affiliate_url": "https://link.amazon/B0gGab8pM",
         "context_hint": "家庭内の役割分担ネタ、晩酌の儀式感と相性が良い",
-        "used_in_articles": []
+        "used_in_articles": ["第11号"]
       }
     ]
   }
