@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   title: "月刊・田中課長 | 今日も、昭和の視点で回覧します。",
   description:
     "52歳・課長・田中一郎の生活便り。昭和と令和のあるあるを回覧し、実際に助けられた道具を紹介します。",
+  verification: {
+    google: "EFxLbMxvY1-4Sh8fvdFPUITTbjwlukbjduNl3VQpOUQ",
+  },
 };
 
 export default function RootLayout({
