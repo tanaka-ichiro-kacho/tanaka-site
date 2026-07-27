@@ -3,13 +3,13 @@ import Hero from "@/components/Hero";
 import SectionLabel from "@/components/SectionLabel";
 import ArticleGrid from "@/components/ArticleGrid";
 import SiteFooter from "@/components/SiteFooter";
-import { articleSummaries } from "@/data/articles";
+import { articleSummaries, latestIssue } from "@/data/articles";
 
 export default function Home() {
   return (
     <div className="wrap">
       <Masthead
-        issue="第14号"
+        issue={latestIssue}
         editor="田中一郎"
         title="月刊・田中課長"
         stampLabel={"回覧\n済"}

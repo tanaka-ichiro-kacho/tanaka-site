@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Masthead from "@/components/Masthead";
 import ArticleDetail from "@/components/ArticleDetail";
 import SiteFooter from "@/components/SiteFooter";
-import { articleDetails } from "@/data/articles";
+import { articleDetails, latestIssue } from "@/data/articles";
 import styles from "./page.module.css";
 
 export const dynamicParams = false;
@@ -44,7 +44,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   return (
     <div className="wrap">
       <Masthead
-        issue="第14号"
+        issue={latestIssue}
         editor="田中一郎"
         title="月刊・田中課長"
         stampLabel={"回覧\n済"}

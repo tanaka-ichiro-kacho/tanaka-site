@@ -31,6 +31,11 @@ export interface ArticleDetail {
   closingParagraphs: string[];
 }
 
+function parseIssueNumber(issue: string): number {
+  const match = issue.match(/\d+/);
+  return match ? Number(match[0]) : 0;
+}
+
 export const articleSummaries: ArticleSummary[] = [
   {
     id: "glasses-01",
@@ -73,6 +78,14 @@ export const articleSummaries: ArticleSummary[] = [
     excerpt: "リモコンより手で向きを合わせないと気が済まない。",
   },
 ];
+
+export const latestIssue: string = articleSummaries.reduce(
+  (latest, article) =>
+    parseIssueNumber(article.issue) > parseIssueNumber(latest)
+      ? article.issue
+      : latest,
+  "第0号",
+);
 
 export const articleDetails: ArticleDetail[] = [
   {
