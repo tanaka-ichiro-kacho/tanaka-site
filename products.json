@@ -17,6 +17,20 @@
         "affiliate_url": "https://link.amazon/B07pkha2X",
         "context_hint": "実家の家電との比較、スイッチの硬さ・軽さの違いなどの語りと相性が良い",
         "used_in_articles": ["第12号", "第15号"]
+      },
+      {
+        "id": "kerorin-oke",
+        "name": "ケロリン桶",
+        "affiliate_url": "https://link.amazon/B04JRolrz",
+        "context_hint": "銭湯で使われていた黄色い桶。知名度が高く、実家の風呂場や銭湯の記憶と直結する。今の家庭用洗面器との対比が使える。",
+        "used_in_articles": []
+      },
+      {
+        "id": "retro-pendulum-clock",
+        "name": "レトロ振り子壁掛け時計",
+        "affiliate_url": "https://link.amazon/B01fE9iZb",
+        "context_hint": "振り子とチクタク音が特徴のアンティーク調壁掛け時計。スマホで時間を見る令和の生活と、音のする時計のある生活との対比が使える。",
+        "used_in_articles": []
       }
     ],
     "晩酌のあるある": [
@@ -26,6 +40,13 @@
         "affiliate_url": "https://link.amazon/B0gGab8pM",
         "context_hint": "家庭内の役割分担ネタ、晩酌の儀式感と相性が良い",
         "used_in_articles": ["第11号", "第16号"]
+      },
+      {
+        "id": "adelia-retro-glass",
+        "name": "アデリアレトロ グラス",
+        "affiliate_url": "https://link.amazon/B0aKSpTWg",
+        "context_hint": "昭和レトロなガラス食器ブランド。今の薄く軽いグラスと違い、厚みと重さがある。晩酌の一杯が、この重みのおかげで様になる、という切り口。",
+        "used_in_articles": []
       }
     ]
   }
