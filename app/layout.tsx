@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "52歳・課長・田中一郎の生活便り。昭和と令和のあるあるを回覧し、実際に助けられた道具を紹介します。",
   verification: {
     google: "EFxLbMxvY1-4Sh8fvdFPUITTbjwlukbjduNl3VQpOUQ",
+    other: {
+      "msvalidate.01": "45D313CC9A77177029CE9DF006CDBD7E",
+    },
   },
 };
 
