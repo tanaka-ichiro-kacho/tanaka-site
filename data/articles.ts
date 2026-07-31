@@ -95,6 +95,16 @@ export const latestIssue: string = articleSummaries.reduce(
   "第0号",
 );
 
+export function getLatestArticlesByCategory(
+  category: ArticleCategory,
+  limit: number,
+): ArticleSummary[] {
+  return articleSummaries
+    .filter((article) => article.category === category)
+    .sort((a, b) => parseIssueNumber(b.issue) - parseIssueNumber(a.issue))
+    .slice(0, limit);
+}
+
 export const articleDetails: ArticleDetail[] = [
   {
     id: "glasses-01",
