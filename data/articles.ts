@@ -85,6 +85,14 @@ export const articleSummaries: ArticleSummary[] = [
     title: "アイスピックで塊氷を割るまでが晩酌である",
     excerpt: "危なっかしい手つきで、塊氷を割るのをやめられない。",
   },
+  {
+    id: "kerorin-oke",
+    issue: "第17号",
+    category: "道具のあるある",
+    categoryIndex: "道具のあるある・06",
+    title: "自宅の風呂にケロリン桶、若手社員に「これ何のグッズですか」と聞かれた話",
+    excerpt: "銭湯を知らない世代には、ただの黄色い桶に見えるらしい。",
+  },
 ];
 
 export const latestIssue: string = articleSummaries.reduce(
@@ -265,6 +273,33 @@ export const articleDetails: ArticleDetail[] = [
     },
     closingParagraphs: [
       "今日も家族には「そのうち指を切るぞ」と言われながら、塊氷を割っている。危なっかしくても、この一手間があるかないかで晩酌の格が変わると、勝手に思い込んでいる。",
+    ],
+  },
+  {
+    id: "kerorin-oke",
+    issue: "第17号",
+    category: "道具のあるある",
+    author: "田中一郎",
+    title: "自宅の風呂にケロリン桶、若手社員に「これ何のグッズですか」と聞かれた話",
+    prNotice: "PR ― 本記事は広告(Amazonアソシエイト)を含みます",
+    paragraphsBeforeQuote: [
+      "うちの風呂には、黄色いケロリン桶が置いてある。先日、部下が家に遊びに来た際にそれを見て「これ何のグッズですか」と真顔で聞かれた。銭湯の説明から始めなければならないとは、思ってもみなかった。",
+    ],
+    quoteLine:
+      "銭湯を知らない世代には、ただの黄色い桶がキャラクターグッズに見えるらしい。",
+    paragraphsAfterQuote: [
+      "昔は銭湯が生活の一部で、あの黄色い桶はどこにでもある当たり前の道具だった。今は自宅に風呂があるのが普通で、銭湯に行った経験のない若手も珍しくない。同じ桶を見ても、片方は懐かしさを感じ、片方は正体不明の雑貨として眺めている。",
+    ],
+    product: {
+      tag: "課長の道具箱",
+      heading: "自宅の風呂道具として、ケロリン桶を一つ置いておく",
+      description:
+        "自宅の風呂道具として、ケロリン桶を一つ置いておくのも悪くない。洗面器としての実用性はそのままに、湯船の前に置くとどこか懐かしい雰囲気になる。銭湯を知る世代には、それだけで通じるものがある。",
+      ctaLabel: "Amazonで確認する",
+      ctaHref: "https://link.amazon/B04JRolrz",
+    },
+    closingParagraphs: [
+      "結局、部下には「昔の銭湯にあったやつだ」とだけ説明して終わった。銭湯の話を一から語る気力は、その日はもう残っていなかった。",
     ],
   },
 ];
